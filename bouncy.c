@@ -23,6 +23,56 @@ int main (int argc, char *argv[]){
     printf("invalid argument\n");
     exit(0);
   }
-
+  double percent = atof(argv[1]);
+  checker(percent);
+  return 0;
 }
+
+int checker(double percent){
+  int i = 0;
+  int counter = 0;
+  double p = 0.00000000;
+
+  while(p != percent){
+    if (!increasing(i)&!decreasing(i)){
+      counter++;
+      p = (double) counter / (double) i;
+      p = p * 100.00;
+    }
+    if (p > percent){
+      return 0;
+    }
+    i++;
+  return 0;
+
+  } 
+}
+
+int increasing(int x){
+  int prev = 0;
+  int curr = 0;
+  while (x != 0){
+    curr = x % 10;
+    x = x / 10;
+    if (!(curr >= prev)){
+      return 0;
+    }
+    prev = curr;
+    
+  }
+  return 1;
+} 
+
+int decreasing(int x){
+  int prev = 10;
+  int curr = 0;
+  while( x != 0){
+    curr = x % 10;
+    x = x / 10;
+    if (!(curr <= prev)) return 0;
+    prev = curr;
+  }
+  return 1;
+}
+  
 

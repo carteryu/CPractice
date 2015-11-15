@@ -14,3 +14,15 @@ Surprisingly, bouncy numbers become more and more common and by the time we reac
 Find the least number for which the proportion of bouncy numbers is exactly 99%.
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (int argc, char *argv[]){
+  //check if argument is valid. 
+  if (argv[1] == NULL) {
+    printf("invalid argument\n");
+    exit(0);
+  }
+
+}
+

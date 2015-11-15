@@ -39,18 +39,20 @@ int checker(double percent){
       p = (double) counter / (double) i;
       p = p * 100.00;
     }
-    if (p > percent){
+    if (p >= percent){
+      
+      printf("%d\n",i);
       return 0;
     }
     i++;
-  return 0;
 
   } 
+  return 0;
 }
 
 int increasing(int x){
   int prev = 0;
-  int curr = 0;
+  int curr;
   while (x != 0){
     curr = x % 10;
     x = x / 10;
@@ -65,7 +67,7 @@ int increasing(int x){
 
 int decreasing(int x){
   int prev = 10;
-  int curr = 0;
+  int curr;
   while( x != 0){
     curr = x % 10;
     x = x / 10;
